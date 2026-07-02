@@ -1,11 +1,11 @@
-import Navbar from "@/components/Navbar/navbar";
+import Navbar from "@/components/Navbar/Navbar";
+import Hero from "@/components/Hero/Hero";
 
 export default function Home() {
   return (
     <main>
       <Navbar />
-
-      <h1>Project Cosmos 🚀</h1>
+      <Hero />
     </main>
   );
 }
