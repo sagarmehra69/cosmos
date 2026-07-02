@@ -1,3 +1,6 @@
+import HeroButtons from "./HeroButtons";
+import HeroStats from "./HeroStats";
+
 export default function Hero() {
   return (
     <section className="flex min-h-screen items-center justify-center px-6">
@@ -8,7 +11,7 @@ export default function Hero() {
         </p>
 
         <p className="mt-6 text-2xl text-gray-300">
-          Hi, I'm 
+          Hi, I'm
         </p>
 
         <h1 className="mt-2 text-7xl font-black tracking-wide md:text-9xl">
@@ -24,17 +27,9 @@ export default function Hero() {
           Artificial Intelligence, Machine Learning and Data Science.
         </p>
 
-        <div className="mt-10 flex flex-wrap justify-center gap-5">
+        <HeroButtons />
 
-          <button className="rounded-2xl bg-violet-600 px-8 py-4 font-semibold transition hover:bg-violet-500">
-            Explore Universe
-          </button>
-
-          <button className="rounded-2xl border border-white/20 px-8 py-4 font-semibold transition hover:bg-white/10">
-            Download Resume
-          </button>
-
-        </div>
+        <HeroStats />
 
       </div>
     </section>
