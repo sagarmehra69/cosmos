@@ -1,5 +1,6 @@
 import HeroButtons from "./HeroButtons";
 import HeroStats from "./HeroStats";
+import ScrollIndicator from "./ScrollIndicator";
 
 export default function Hero() {
   return (
@@ -30,6 +31,8 @@ export default function Hero() {
         <HeroButtons />
 
         <HeroStats />
+
+        <ScrollIndicator/>
 
       </div>
     </section>
