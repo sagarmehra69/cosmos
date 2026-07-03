@@ -1,16 +1,14 @@
 export const stats = [
   {
-    number: "5+",
-    label: "Projects",
+    value: "5+",
+    label: "Projects Built",
   },
-
   {
-    number: "15+",
-    label: "Technologies",
+    value: "15+",
+    label: "Technologies Learned",
   },
-
   {
-    number: "1000+",
-    label: "Learning Hours",
+    value: "24/7",
+    label: "Learning Mindset",
   },
 ];

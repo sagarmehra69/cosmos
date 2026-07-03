@@ -1,19 +1,17 @@
-type HeadingProps = {
+interface HeadingProps {
+  eyebrow: string;
   title: string;
-  subtitle?: string;
-};
+}
 
 export default function Heading({
+  eyebrow,
   title,
-  subtitle,
 }: HeadingProps) {
   return (
-    <div className="mb-12 text-center">
-      {subtitle && (
-        <p className="mb-3 text-violet-400">
-          {subtitle}
-        </p>
-      )}
+    <div className="space-y-4">
+      <p className="uppercase tracking-[0.35em] text-violet-400 text-sm">
+        {eyebrow}
+      </p>
 
       <h2 className="text-5xl font-bold">
         {title}

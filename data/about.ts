@@ -6,63 +6,63 @@ export const about: About = {
   title: "Who Am I?",
 
   description:
-    "I'm Sagar Mehra, an aspiring Data Analyst with a strong interest in Data Science, Machine Learning, and Artificial Intelligence. I enjoy transforming raw data into meaningful insights and building solutions that solve real-world problems through technology.",
+    "I'm Sagar Mehra, an aspiring Data Analyst passionate about uncovering insights from data and solving real-world problems. I enjoy working with SQL, Python, Excel, and Power BI to transform raw information into meaningful decisions.",
 
   currentMission:
-    "Currently, I'm focused on strengthening my analytical skills, mastering SQL, Python, Excel, Power BI, Statistics, and Machine Learning while building industry-level projects to secure a Data Analyst role.",
+    "My current mission is to secure a Data Analyst role while continuously improving my analytical thinking through real-world projects, case studies, and industry-standard tools.",
 
   futureMission:
-    "My long-term goal is to become an AI Engineer capable of designing intelligent systems that create real-world impact. Every project I build today is a step toward that mission.",
+    "After building a strong foundation in data analytics, my goal is to transition into Data Science and ultimately become an AI Engineer developing intelligent systems that solve meaningful real-world problems.",
 
   values: [
     {
       title: "Continuous Learning",
       description:
-        "Technology evolves every day, so I believe learning should never stop.",
+        "Every project is an opportunity to learn something new.",
     },
     {
       title: "Problem Solving",
       description:
-        "I enjoy breaking down complex problems into simple, practical solutions using data.",
+        "Data is only valuable when it leads to better decisions.",
     },
     {
       title: "Curiosity",
       description:
-        "I constantly explore new technologies, tools, and ideas to improve my skills.",
+        "Asking better questions leads to better solutions.",
     },
     {
       title: "Consistency",
       description:
-        "Small improvements every day create extraordinary results over time.",
+        "Small improvements every day build extraordinary results.",
     },
   ],
 
   journey: [
     {
       year: "2025",
-      title: "Bachelor of Computer Applications",
+      title: "BCA Graduate",
       description:
-        "Completed my BCA while building a strong foundation in programming and computer science.",
+        "Built a strong foundation in programming, databases, and software development.",
     },
     {
       year: "2026",
       title: "Aspiring Data Analyst",
       description:
-        "Focused on mastering data analytics, SQL, Python, Power BI, and creating real-world projects.",
+        "Building projects using SQL, Python, Excel, Power BI, and Statistics.",
     },
     {
       year: "Future",
       title: "Data Scientist",
       description:
-        "Expanding into predictive analytics, machine learning, and advanced data science.",
+        "Expanding into Machine Learning, predictive analytics, and advanced data science.",
     },
     {
       year: "Future",
       title: "AI Engineer",
       description:
-        "Building intelligent AI systems that solve meaningful real-world problems.",
+        "Designing intelligent systems that solve meaningful real-world problems.",
     },
   ],
 
-  profileImage: "/images/profile.jpg",
+  profileImage: "/images/profile.png",
 };
