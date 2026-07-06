@@ -1,6 +1,8 @@
+import Background from "@/components/effects/Universe";
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import Universe from "@/components/effects/Universe";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -82,6 +84,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="bg-slate-950 text-slate-100 antialiased">
+        <Universe />
         {children}
       </body>
     </html>
