@@ -1,23 +1,34 @@
-import Card from "@/components/ui/Card";
-import { stats } from "@/data/stats";
-
 export default function HeroStats() {
   return (
-    <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3">
-      {stats.map((stat) => (
-        <Card
-          key={stat.label}
-          className="flex flex-col items-center justify-center text-center"
-        >
-          <h3 className="text-5xl font-black tracking-tight text-white">
-            {stat.value}
-          </h3>
+    <div className="mt-14 flex flex-wrap gap-10">
 
-          <p className="mt-4 text-base text-slate-400">
-            {stat.label}
-          </p>
-        </Card>
-      ))}
+      <div>
+        <h3 className="text-4xl font-bold text-white">
+          5+
+        </h3>
+        <p className="text-slate-400">
+          Projects
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-4xl font-bold text-white">
+          15+
+        </h3>
+        <p className="text-slate-400">
+          Technologies
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-4xl font-bold text-violet-400">
+          100%
+        </h3>
+        <p className="text-slate-400">
+          Learning
+        </p>
+      </div>
+
     </div>
   );
 }

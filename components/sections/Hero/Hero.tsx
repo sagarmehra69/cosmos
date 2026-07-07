@@ -1,40 +1,58 @@
-import { hero } from "@/data/hero";
+import FadeUp from "@/components/ui/FadeUp";
 
+import HeroBackground from "./HeroBackground";
+import HeroBadge from "./HeroBadge";
 import HeroButtons from "./HeroButtons";
+import HeroImage from "./HeroImage";
 import HeroStats from "./HeroStats";
+import HeroTitle from "./HeroTitle";
+import HeroTyping from "./HeroTyping";
 import ScrollIndicator from "./ScrollIndicator";
 
 export default function Hero() {
   return (
-    <section className="flex min-h-screen items-center justify-center px-6 pt-24">
-      <div className="max-w-5xl text-center">
+    <section
+      id="home"
+      className="relative overflow-hidden px-6 py-28"
+    >
+      <HeroBackground />
 
-        <p className="text-sm font-semibold uppercase tracking-[0.35em] text-violet-400">
-          {hero.greeting}
-        </p>
+      <div className="relative z-10 mx-auto grid min-h-screen max-w-7xl items-center gap-20 lg:grid-cols-2">
 
-        <p className="mt-8 text-2xl text-slate-300">
-          {hero.intro}
-        </p>
+        {/* Left Side */}
+        <div>
 
-        <h1 className="mt-3 text-7xl font-black tracking-tight md:text-9xl">
-          {hero.name}
-        </h1>
+          <FadeUp>
+            <HeroBadge />
+          </FadeUp>
 
-        <h2 className="mt-6 text-3xl font-semibold text-slate-200 md:text-5xl">
-          {hero.role}
-        </h2>
+          <FadeUp delay={0.2}>
+            <HeroTitle />
+          </FadeUp>
 
-        <p className="mx-auto mt-8 max-w-2xl text-lg leading-9 text-slate-400">
-          {hero.description}
-        </p>
+          <FadeUp delay={0.35}>
+            <HeroTyping />
+          </FadeUp>
 
-        <HeroButtons />
+          <FadeUp delay={0.5}>
+            <HeroButtons />
+          </FadeUp>
 
-        <HeroStats />
+          <FadeUp delay={0.7}>
+            <HeroStats />
+          </FadeUp>
 
+        </div>
+
+        {/* Right Side */}
+        <FadeUp delay={0.4}>
+          <HeroImage />
+        </FadeUp>
+
+      </div>
+
+      <div className="relative z-10 mt-10 flex justify-center">
         <ScrollIndicator />
-
       </div>
     </section>
   );
