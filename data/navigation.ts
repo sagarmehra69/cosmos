@@ -1,31 +1,31 @@
-export const navigation = [
-  {
-    title: "Home",
-    href: "/",
-  },
+export interface NavigationItem {
+  name: string;
+  href: string;
+}
 
+export const navigation: NavigationItem[] = [
   {
-    title: "About",
+    name: "About",
     href: "#about",
   },
-
   {
-    title: "Skills",
+    name: "Skills",
     href: "#skills",
   },
-
   {
-    title: "Projects",
+    name: "Projects",
     href: "#projects",
   },
-
   {
-    title: "Mission",
-    href: "#mission",
+    name: "Education",
+    href: "#education",
   },
-
   {
-    title: "Contact",
+    name: "Experience",
+    href: "#experience",
+  },
+  {
+    name: "Contact",
     href: "#contact",
   },
 ];

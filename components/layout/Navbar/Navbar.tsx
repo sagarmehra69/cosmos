@@ -1,28 +1,19 @@
+import NavLogo from "./NavLogo";
+import NavLinks from "./NavLinks";
+import MobileMenu from "./MobileMenu";
+
 export default function Navbar() {
   return (
-    <header className="fixed top-0 left-0 w-full z-50 flex justify-center pt-6">
-      <nav className="w-[92%] max-w-7xl rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl">
-        <div className="flex items-center justify-between px-6 py-4">
+    <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-black/30 backdrop-blur-xl">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
 
-          <h1 className="text-xl font-bold">
-            🪐 Cosmos
-          </h1>
+        <NavLogo />
 
-          <ul className="hidden md:flex gap-8 text-sm">
-            <li>Home</li>
-            <li>About</li>
-            <li>Skills</li>
-            <li>Projects</li>
-            <li>Experience</li>
-            <li>Contact</li>
-          </ul>
+        <NavLinks />
 
-          <button className="rounded-xl bg-violet-600 px-5 py-2 text-sm font-medium hover:bg-violet-500 transition">
-            Resume
-          </button>
+        <MobileMenu />
 
-        </div>
-      </nav>
+      </div>
     </header>
   );
 }
