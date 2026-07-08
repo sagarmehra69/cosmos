@@ -11,9 +11,10 @@ export default function ProjectsHeader() {
       </h2>
 
       <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-400">
-        A collection of real-world projects focused on
-        Data Analytics, Machine Learning, Artificial Intelligence,
-        Business Intelligence and full-stack dashboard development.
+        A showcase of real-world projects in Data Analytics,
+        Machine Learning, Artificial Intelligence and Dashboard
+        Development built during internships, academic work and
+        self-driven learning.
       </p>
 
     </div>

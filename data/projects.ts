@@ -9,7 +9,7 @@ export const projects: Project[] = [
 
     image: "/images/projects/neural-retail.png",
 
-    github: "https://github.com/sagarmehra69",
+    github: "https://github.com/sagarmehra69/neuralretail-ai-sales-intelligence",
 
     demo: "",
 
@@ -45,7 +45,7 @@ export const projects: Project[] = [
 
     image: "/images/projects/spis.png",
 
-    github: "https://github.com/sagarmehra69",
+    github: "https://github.com/sagarmehra69/student-performance-intelligence-system",
 
     demo: "",
 
@@ -72,13 +72,12 @@ export const projects: Project[] = [
     title: "Customer Shopping Behavior Analysis",
 
     shortTitle: "Shopping",
-
     description:
       "A retail analytics project focused on customer purchasing behaviour, exploratory data analysis and business intelligence for better retail decisions.",
 
     image: "/images/projects/customer-shopping.png",
 
-    github: "https://github.com/sagarmehra69",
+    github: "https://github.com/sagarmehra69/Customer-shopping-behavior-analysis",
 
     demo: "",
 
@@ -105,13 +104,12 @@ export const projects: Project[] = [
     title: "UAC Care Transition Analytics",
 
     shortTitle: "UAC",
-
     description:
       "A healthcare analytics dashboard that tracks operational KPIs and visualizes care transition performance through interactive reports.",
 
     image: "/images/projects/uac-care.png",
 
-    github: "https://github.com/sagarmehra69",
+    github: "https://github.com/sagarmehra69/uac-care-transition-analytics",
 
     demo: "",
 
