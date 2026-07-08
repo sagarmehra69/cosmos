@@ -1,15 +1,19 @@
-import Section from "@/components/ui/Section";
-
 import ExperienceHeader from "./ExperienceHeader";
 import ExperienceTimeline from "./ExperienceTimeline";
 
 export default function Experience() {
   return (
-    <Section id="experience">
-      <div className="space-y-16">
+    <section
+      id="experience"
+      className="relative px-6 py-28"
+    >
+      <div className="mx-auto max-w-7xl">
+
         <ExperienceHeader />
+
         <ExperienceTimeline />
+
       </div>
-    </Section>
+    </section>
   );
 }

@@ -1,36 +1,61 @@
-export interface Experience {
-  id: number;
-  role: string;
-  company: string;
-  duration: string;
-  location: string;
-  type: "Internship" | "Full Time" | "Freelance" | "Training";
-  description: string;
-  technologies: string[];
-  current: boolean;
-}
+import { Experience } from "@/types/experience";
 
-export const experience: Experience[] = [
+export const experiences: Experience[] = [
   {
-    id: 1,
-    role: "Data Analytics Intern",
-    company: "Unified Mentor",
-    duration: "Feb (2026) - May (2026)",
+    company: "Ennoia SofTech Pvt. Ltd.",
+    role: "Data Analyst Intern",
     location: "Remote",
-    type: "Internship",
-    description:
-      "Worked on real-world data analytics projects involving data cleaning, exploratory data analysis, dashboard creation, and business insight generation using Python, SQL, and Power BI. Collaborated on practical datasets to strengthen analytical thinking and problem-solving skills.",
+    duration: "June 2026 – Present",
+    current: true,
 
-    technologies: [
+    description:
+      "Working with real-world business datasets to deliver analytical solutions using Python, SQL, Excel, Power BI and Machine Learning.",
+
+    achievements: [
+      "Performed data cleaning and preprocessing.",
+      "Conducted Exploratory Data Analysis (EDA).",
+      "Built Power BI dashboards and reports.",
+      "Generated business insights for decision-making.",
+      "Worked with SQL and Python for analysis.",
+      "Collaborated remotely with project mentors.",
+    ],
+
+    skills: [
       "Python",
       "SQL",
+      "Excel",
       "Power BI",
       "Pandas",
       "NumPy",
-      "Excel"
+      "EDA",
+      "Machine Learning",
+    ],
+  },
+
+  {
+    company: "Unified Mentor",
+    role: "Data Analyst Intern",
+    location: "Remote",
+    duration: "Feb 2026 – May 2026",
+    current: false,
+
+    description:
+      "Completed a remote Data Analyst Internship focused on analytics, reporting and business intelligence.",
+
+    achievements: [
+      "Completed end-to-end analytics projects.",
+      "Cleaned and transformed datasets.",
+      "Built interactive dashboards.",
+      "Performed business data analysis.",
+      "Improved analytical and problem-solving skills.",
     ],
 
-    current: true
-  }
-
+    skills: [
+      "Python",
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Pandas",
+    ],
+  },
 ];

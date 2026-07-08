@@ -1,16 +1,31 @@
-import Section from "@/components/ui/Section";
-
-import AboutContent from "./AboutContent";
-import AboutImage from "./AboutImage";
+import AboutHeader from "./AboutHeader";
+import AboutStory from "./AboutStory";
+import JourneyTimeline from "./JourneyTimeline";
+import AboutCards from "./AboutCards";
 
 export default function About() {
   return (
-    <Section id="about">
-      <div className="grid items-center gap-16 lg:grid-cols-2">
-        <AboutImage />
+    <section
+      id="about"
+      className="px-6 py-28"
+    >
+      <div className="mx-auto max-w-7xl">
 
-        <AboutContent />
+        <AboutHeader />
+
+        <div className="mt-20 grid gap-20 lg:grid-cols-2">
+
+          <AboutStory />
+
+          <JourneyTimeline />
+
+        </div>
+
+        <div className="mt-24">
+          <AboutCards />
+        </div>
+
       </div>
-    </Section>
+    </section>
   );
 }
