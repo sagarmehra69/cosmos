@@ -2,7 +2,7 @@ import Background from "@/components/effects/Universe/Universe";
 import Hero from "@/components/sections/Hero/Hero";
 import About from "@/components/sections/About/About";
 import Skills from "@/components/sections/Skills/Skills";
-import Projects from "@/components/sections/Projects";
+import {Projects} from "@/components/sections/Projects";
 import Education from "@/components/sections/Education/Education";
 import Certifications from "@/components/sections/Certifications/Certifications";
 import Experience from "@/components/sections/Experience/Experience";

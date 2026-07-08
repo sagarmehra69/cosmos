@@ -1,18 +1,21 @@
-import Heading from "@/components/ui/Heading";
-
 export default function ProjectsHeader() {
   return (
-    <div className="mx-auto max-w-3xl text-center">
-      <Heading
-        eyebrow="MISSION PROJECTS"
-        title="Projects That Reflect My Learning"
-      />
+    <div className="text-center">
 
-      <p className="mt-6 text-lg leading-8 text-slate-400">
-        Every project represents a step in my journey from aspiring Data
-        Analyst to future AI Engineer. Each one focuses on solving real-world
-        problems using data, analytics, and modern technologies.
+      <p className="text-sm font-semibold uppercase tracking-[0.35em] text-violet-400">
+        Portfolio
       </p>
+
+      <h2 className="mt-4 text-5xl font-black tracking-tight text-white">
+        Featured Projects
+      </h2>
+
+      <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-400">
+        A collection of real-world projects focused on
+        Data Analytics, Machine Learning, Artificial Intelligence,
+        Business Intelligence and full-stack dashboard development.
+      </p>
+
     </div>
   );
 }
