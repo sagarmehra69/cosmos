@@ -1,33 +1,70 @@
-export interface SkillCategory {
-  title: string;
-  icon: string;
-  description: string;
-  skills: string[];
-}
+import { SkillCategory } from "@/types/skill";
 
 export const skillCategories: SkillCategory[] = [
   {
     title: "Programming",
-    icon: "💻",
-    description: "Building efficient and scalable software.",
-    skills: ["Python", "SQL", "Java", "C"],
+    icon: "Code2",
+    description:
+      "Programming languages and core technologies used to build analytical and software solutions.",
+    skills: [
+      "Python",
+      "SQL",
+      "Java",
+      "C",
+      "C++",
+      "JavaScript",
+      "HTML",
+      "CSS",
+    ],
   },
+
   {
     title: "Data Analytics",
-    icon: "📊",
-    description: "Transforming raw data into meaningful insights.",
-    skills: ["Excel", "Power BI", "Pandas", "NumPy"],
+    icon: "BarChart3",
+    description:
+      "Transforming raw data into meaningful insights through analysis, visualization and reporting.",
+    skills: [
+      "Excel",
+      "Power BI",
+      "Pandas",
+      "NumPy",
+      "Data Cleaning",
+      "EDA",
+      "Data Visualization",
+      "Statistics",
+    ],
   },
+
   {
-    title: "Machine Learning",
-    icon: "🤖",
-    description: "Learning intelligent systems and predictive models.",
-    skills: ["Scikit-learn", "TensorFlow", "Statistics", "EDA"],
+    title: "AI & Machine Learning",
+    icon: "Brain",
+    description:
+      "Building predictive models and continuously expanding knowledge in AI-driven solutions.",
+    skills: [
+      "Machine Learning",
+      "Scikit-learn",
+      "TensorFlow",
+      "Predictive Analytics",
+      "Model Evaluation",
+      "Feature Engineering",
+      "Data Science",
+    ],
   },
+
   {
-    title: "Tools",
-    icon: "🛠️",
-    description: "Modern development workflow and collaboration.",
-    skills: ["Git", "GitHub", "VS Code", "Linux"],
+    title: "Tools & Platforms",
+    icon: "Wrench",
+    description:
+      "Development tools, databases and platforms used throughout analytics and software projects.",
+    skills: [
+      "Git",
+      "GitHub",
+      "Streamlit",
+      "Jupyter Notebook",
+      "Google Colab",
+      "VS Code",
+      "MySQL",
+      "PostgreSQL",
+    ],
   },
 ];

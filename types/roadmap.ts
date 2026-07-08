@@ -1,5 +1,3 @@
-import { RoadmapItem, RoadmapStatus } from "@/types";
-
 export type RoadmapStatus =
   | "completed"
   | "current"

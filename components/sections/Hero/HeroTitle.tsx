@@ -1,9 +1,13 @@
+import { hero } from "@/data/hero";
+
 export default function HeroTitle() {
+  const [firstName, lastName] = hero.name.split(" ");
+
   return (
     <div className="mt-6">
 
       <p className="text-lg font-medium tracking-wide text-violet-400">
-        Hi, I'm
+        {hero.intro}
       </p>
 
       <h1
@@ -24,8 +28,8 @@ export default function HeroTitle() {
           lg:text-9xl
         "
       >
-        <span className="block">SAGAR</span>
-        <span className="block">MEHRA</span>
+        <span className="block">{firstName}</span>
+        <span className="block">{lastName}</span>
       </h1>
 
       <p className="mt-8 max-w-xl text-lg leading-8 text-slate-400">
