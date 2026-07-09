@@ -1,4 +1,3 @@
-import Background from "@/components/effects/Universe";
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
@@ -83,9 +82,9 @@ export default function RootLayout({
       className={`${inter.variable} ${spaceGrotesk.variable}`}
       suppressHydrationWarning
     >
-      <body className="bg-slate-950 text-slate-100 antialiased">
+      <body className="relative min-h-screen overflow-x-hidden bg-slate-950 text-slate-100 antialiased">
         <Universe />
-        {children}
+        <div className="relative z-10">{children}</div>
       </body>
     </html>
   );

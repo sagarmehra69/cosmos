@@ -1,4 +1,3 @@
-import Background from "@/components/effects/Universe/Universe";
 import Hero from "@/components/sections/Hero/Hero";
 import About from "@/components/sections/About/About";
 import Experience from "@/components/sections/Experience/Experience";
@@ -10,8 +9,7 @@ import Navbar from "@/components/layout/Navbar/Navbar";
 
 export default function Home() {
   return (
-    <main>
-      <Background />
+    <main className="relative z-10">
       <Navbar />
       <Hero />
       <About />
