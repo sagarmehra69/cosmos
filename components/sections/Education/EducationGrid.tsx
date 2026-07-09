@@ -1,12 +1,12 @@
 import { education } from "@/data/education";
 import EducationCard from "./EducationCard";
 
-export default function EducationTimeline() {
+export default function EducationGrid() {
   return (
-    <div className="space-y-8">
+    <div className="grid gap-8 lg:grid-cols-2">
       {education.map((item) => (
         <EducationCard
-          key={item.id}
+          key={item.degree}
           education={item}
         />
       ))}

@@ -1,34 +1,29 @@
-export interface Education {
-  id: number;
-  degree: string;
-  institution: string;
-  duration: string;
-  location: string;
-  description: string;
-  coursework: string[];
-  current: boolean;
-}
+import { Education } from "@/types/education";
 
 export const education: Education[] = [
   {
-    id: 1,
     degree: "Bachelor of Computer Applications (BCA)",
-    institution: "SSJ University",
-    duration: "2023 - 2026",
+    institution: "Soban Singh Jeena University",
     location: "Almora, Uttarakhand",
-
-    description:
-      "Focused on software development, data structures, databases, networking, cloud computing and machine learning while building practical projects.",
-
+    duration: "2023 – 2026",
+    score: "66.67%",
+    status: "Graduated",
     coursework: [
-      "Data Structures & Algorithms",
-      "Database Management Systems",
-      "Operating Systems",
-      "Cloud Computing",
+      "Python",
+      "SQL & DBMS",
+      "Data Structures",
+      "Artificial Intelligence",
       "Machine Learning",
-      "Computer Networks"
+      "Cloud Computing",
     ],
+  },
 
-    current: true
-  }
+  {
+    degree: "Higher Secondary (Class XII)",
+    institution: "Government Inter College (GIC), Bhagtola",
+    location: "Almora, Uttarakhand",
+    duration: "2023",
+    score: "71%",
+    status: "Uttarakhand Board (NCERT)",
+  },
 ];
