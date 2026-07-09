@@ -4,9 +4,8 @@ import About from "@/components/sections/About/About";
 import Skills from "@/components/sections/Skills/Skills";
 import {Projects} from "@/components/sections/Projects";
 import {Education} from "@/components/sections/Education";
-import Certifications from "@/components/sections/Certifications/Certifications";
 import Experience from "@/components/sections/Experience/Experience";
-import Contact from "@/components/sections/Contact/Contact";
+import {Contact} from "@/components/sections/Contact";
 import Navbar from "@/components/layout/Navbar/Navbar";
 
 export default function Home() {
@@ -19,7 +18,6 @@ export default function Home() {
       <Skills />
       <Projects />
       <Education /> 
-      <Certifications />
       <Experience />
       <Contact />
     </main>
