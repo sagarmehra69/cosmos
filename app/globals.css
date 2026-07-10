@@ -366,6 +366,117 @@ h6 {
   animation-fill-mode: forwards;
 }
 
+/* Enhanced shooting star styles using CSS variables for per-meteor control */
+.shooting-star {
+  position: absolute;
+  pointer-events: none;
+  transform-origin: 0 50%;
+  /* per-meteor variables: --angle, --length, --tx, --ty, --blur, --duration */
+  animation-name: shootingStarVar;
+  animation-timing-function: cubic-bezier(.22,.9,.12,1);
+  animation-fill-mode: forwards;
+  animation-duration: var(--duration, 2s);
+  will-change: transform, opacity, filter;
+}
+
+.shooting-star__trail {
+  width: var(--length, 200px);
+  height: 2px;
+  border-radius: 999px;
+  transform-origin: 0 50%;
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.85) 25%, rgba(255,255,255,0.25) 60%, transparent 100%);
+  filter: blur(var(--blur, 4px));
+  box-shadow: 0 0 8px rgba(255,255,255,0.9), 0 0 22px var(--tint, rgba(139,92,246,0.6));
+}
+
+.shooting-star__trail--glow {
+  height: 6px;
+  /* reduce visual impact on background */
+  opacity: 0.55;
+  mix-blend-mode: normal;
+  background: linear-gradient(90deg, var(--tint, rgba(139,92,246,0.25)) 0%, transparent 45%);
+  filter: blur(calc(var(--blur, 4px) * 1.1));
+}
+
+.shooting-star__trail--core {
+  height: 2px;
+  opacity: 1;
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.6) 30%, transparent 100%);
+  filter: blur(0px);
+}
+
+.shooting-star__head {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: var(--head-size, 8px);
+  height: var(--head-size, 8px);
+  border-radius: 999px;
+  /* core should be bright white; colored halo should be subtle */
+  background: radial-gradient(circle at 40% 30%, #ffffff 0%, #ffffff 42%, rgba(255,255,255,0.6) 55%, transparent 100%);
+  box-shadow: 0 0 calc(var(--head-size,8px) * 1.1) rgba(255,255,255,0.95), 0 0 calc(var(--head-size,8px) * 1.6) rgba(139,92,246,0.18);
+  filter: contrast(120%) saturate(105%);
+  mix-blend-mode: normal;
+}
+
+/* Slight tail lengthening for more dramatic meteors */
+.shooting-star {
+  --length: calc(var(--length, 200px) * 1.15);
+}
+
+.shooting-star__head {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 40% 30%, #ffffff 0%, #ffffff 30%, var(--tint, rgba(139,92,246,0.9)) 60%, transparent 100%);
+  box-shadow: 0 0 8px rgba(255,255,255,0.95), 0 0 20px var(--tint, rgba(139,92,246,0.85));
+}
+
+@keyframes shootingStarVar {
+
+  0% {
+    transform: translate3d(0, 0, 0) rotate(var(--angle, -35deg));
+    opacity: 0;
+  }
+
+  6% {
+    opacity: 1;
+  }
+
+  30% {
+    transform: translate3d(calc(var(--tx, -1600px) * 0.35), calc(var(--ty, 700px) * 0.35), 0) rotate(var(--angle, -35deg));
+  }
+
+  60% {
+    transform: translate3d(calc(var(--tx, -1600px) * 0.75), calc(var(--ty, 700px) * 0.75), 0) rotate(var(--angle, -35deg));
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate3d(var(--tx, -1600px), var(--ty, 700px), 0) rotate(var(--angle, -35deg));
+    opacity: 0;
+  }
+}
+
+@keyframes tintShift {
+  0% {
+    filter: blur(var(--blur, 4px)) hue-rotate(-18deg) saturate(110%) contrast(110%);
+  }
+
+  50% {
+    filter: blur(var(--blur, 4px)) hue-rotate(18deg) saturate(130%) contrast(120%);
+  }
+
+  100% {
+    filter: blur(var(--blur, 4px)) hue-rotate(-18deg) saturate(110%) contrast(110%);
+  }
+}
+
 /* ===========================
    Gradient Glow
 =========================== */
