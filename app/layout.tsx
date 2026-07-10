@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+
 import Universe from "@/components/effects/Universe";
 
 const inter = Inter({
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
     default: "Sagar Mehra | Data Analyst",
     template: "%s | Sagar Mehra",
   },
+
   description:
     "Portfolio of Sagar Mehra, an aspiring Data Analyst specializing in SQL, Python, Power BI, Excel, Statistics, and Data Visualization while progressing toward Data Science and AI Engineering.",
 
@@ -47,8 +49,6 @@ export const metadata: Metadata = {
   ],
 
   creator: "Sagar Mehra",
-
-  // metadataBase: new URL("https://sagarmehra.dev"), // Change this after buying your domain
 
   openGraph: {
     title: "Sagar Mehra | Data Analyst",
@@ -82,9 +82,12 @@ export default function RootLayout({
       className={`${inter.variable} ${spaceGrotesk.variable}`}
       suppressHydrationWarning
     >
-      <body className="relative min-h-screen overflow-x-hidden bg-slate-950 text-slate-100 antialiased">
+      <body className="relative min-h-screen overflow-x-hidden bg-[#030014] text-slate-100 antialiased">
         <Universe />
-        <div className="relative z-10">{children}</div>
+
+        <main className="relative z-10 min-h-screen">
+          {children}
+        </main>
       </body>
     </html>
   );
