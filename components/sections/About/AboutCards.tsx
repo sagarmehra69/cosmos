@@ -1,50 +1,58 @@
 import {
-  Brain,
-  Briefcase,
-  ChartColumn,
-  Target,
+  Award,
+  BrainCircuit,
+  BriefcaseBusiness,
+  GraduationCap,
 } from "lucide-react";
 
 import AboutCard from "./AboutCard";
 
 const cards = [
   {
-    icon: <Target size={34} />,
-    title: "Career Goal",
+    icon: GraduationCap,
+    title: "Education",
+    value: "Bachelor of Computer Applications",
     description:
-      "Become an AI Engineer by mastering Data Analytics, Machine Learning and Artificial Intelligence.",
+      "Strong foundation in programming, databases, software engineering, and analytics.",
   },
   {
-    icon: <ChartColumn size={34} />,
-    title: "Data Analytics",
+    icon: BriefcaseBusiness,
+    title: "Experience",
+    value: "2 Data Analytics Internships",
     description:
-      "Skilled in SQL, Excel, Python and Power BI for transforming raw data into business insights.",
+      "Hands-on experience solving real business problems using modern analytics tools.",
   },
   {
-    icon: <Brain size={34} />,
-    title: "AI & Machine Learning",
+    icon: BrainCircuit,
+    title: "Specialization",
+    value: "Data Analytics & AI",
     description:
-      "Building predictive models and continuously expanding expertise in Data Science and AI.",
+      "Focused on Python, SQL, Power BI, Machine Learning, and Business Intelligence.",
   },
   {
-    icon: <Briefcase size={34} />,
-    title: "Current Focus",
+    icon: Award,
+    title: "Approach",
+    value: "Continuous Learning",
     description:
-      "Creating impactful portfolio projects while preparing for Data Analyst roles in top technology companies.",
+      "Committed to building production-ready solutions while improving every day.",
   },
 ];
 
 export default function AboutCards() {
   return (
-    <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+    <div
+      className="
+        grid
+        gap-6
 
+        sm:grid-cols-2
+
+        xl:grid-cols-4
+      "
+    >
       {cards.map((card) => (
-        <AboutCard
-          key={card.title}
-          {...card}
-        />
+        <AboutCard key={card.title} {...card} />
       ))}
-
     </div>
   );
 }
