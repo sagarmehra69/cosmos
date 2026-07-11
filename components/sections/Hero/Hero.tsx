@@ -1,7 +1,6 @@
 import FadeUp from "@/components/ui/FadeUp";
 
 import HeroBackground from "./HeroBackground";
-import HeroBadge from "./HeroBadge";
 import HeroButtons from "./HeroButtons";
 import HeroImage from "./HeroImage";
 import HeroStats from "./HeroStats";
@@ -13,54 +12,104 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden px-6 py-24"
+      className="
+        relative
+        isolate
+
+        flex
+        min-h-screen
+
+        overflow-hidden
+
+        px-6
+      "
     >
       <HeroBackground />
 
-      <div className="relative z-10 mx-auto grid min-h-screen max-w-7xl items-center gap-16 lg:grid-cols-[1.15fr_0.85fr]">
+      <div
+        className="
+          relative
+          z-10
 
-        {/* Left */}
+          mx-auto
 
-        <div className="order-2 text-center lg:order-1 lg:text-left">
+          flex
+          w-full
+          max-w-7xl
+          flex-col
+          justify-between
+        "
+      >
+        {/* ============================
+            Main Hero
+        ============================ */}
 
-          <FadeUp>
-            <HeroBadge />
-          </FadeUp>
+        <div
+          className="
+            flex-1
 
-          <FadeUp delay={0.15}>
-            <HeroTitle />
-          </FadeUp>
+            grid
+            items-center
 
-          <FadeUp delay={0.30}>
-            <HeroTyping />
-          </FadeUp>
+            gap-16
 
-          <FadeUp delay={0.45}>
-            <HeroButtons />
-          </FadeUp>
+            pt-24
 
-          <FadeUp delay={0.60}>
-            <HeroStats />
-          </FadeUp>
+            lg:grid-cols-[1.1fr_0.9fr]
+          "
+        >
+          {/* Left */}
 
+          <div>
+            <FadeUp>
+              <HeroTitle />
+            </FadeUp>
+
+            <FadeUp delay={0.08}>
+              <HeroTyping />
+            </FadeUp>
+
+            <FadeUp delay={0.16}>
+              <HeroButtons />
+            </FadeUp>
+
+            <FadeUp delay={0.24}>
+              <HeroStats />
+            </FadeUp>
+          </div>
+
+          {/* Right */}
+
+          <div
+            className="
+              flex
+              items-center
+              justify-center
+            "
+          >
+            <FadeUp delay={0.15}>
+              <HeroImage />
+            </FadeUp>
+          </div>
         </div>
 
-        {/* Right */}
+        {/* ============================
+            Scroll Indicator
+        ============================ */}
 
-        <div className="order-1 flex justify-center lg:order-2">
+        <div
+          className="
+            flex
+            justify-center
 
-          <FadeUp delay={0.25}>
-            <HeroImage />
+            pb-8
+          "
+        >
+          <FadeUp delay={0.5}>
+            <ScrollIndicator />
           </FadeUp>
-
         </div>
-
       </div>
-
-      <div className="relative z-10 mt-10 flex justify-center">
-        <ScrollIndicator />
-      </div>
-
     </section>
   );
 }

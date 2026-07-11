@@ -1,61 +1,127 @@
 import { hero } from "@/data/hero";
 
 export default function HeroTitle() {
-  const [firstName, lastName] = hero.name.split(" ");
-
   return (
-    <div className="mt-6">
+    <div className="mt-8 max-w-3xl">
+      {/* Intro */}
 
-      <p className="text-lg font-medium tracking-wide text-violet-400">
+      <p
+        className="
+          text-base
+          font-medium
+          uppercase
+          tracking-[0.28em]
+          text-violet-400
+        "
+      >
         {hero.intro}
       </p>
 
+      {/* Name */}
+
       <h1
         className="
-          mt-4
-          bg-gradient-to-r
-          from-white
-          via-violet-200
-          to-violet-500
-          bg-clip-text
-          text-transparent
+          mt-6
+
           font-black
-          tracking-tight
-          leading-none
-          text-6xl
-          sm:text-7xl
-          md:text-8xl
-          lg:text-9xl
+          leading-[0.95]
+          tracking-[-0.05em]
+
+          text-white
+
+          text-5xl
+          sm:text-6xl
+          md:text-7xl
+          lg:text-8xl
+          xl:text-[6.5rem]
         "
       >
-        <span className="block">{firstName}</span>
-        <span className="block">{lastName}</span>
+        {hero.name}
       </h1>
 
-      <p className="mt-8 max-w-xl text-lg leading-8 text-slate-400">
-        I transform raw data into actionable insights using
-        <span className="font-semibold text-white"> SQL</span>,
-        <span className="font-semibold text-white"> Python</span>,
-        <span className="font-semibold text-white"> Excel</span> and
-        <span className="font-semibold text-white"> Power BI</span> to solve
-        real-world business problems.
+      {/* Accent Line */}
+
+      <div
+        className="
+          mt-8
+          h-[2px]
+          w-28
+          rounded-full
+
+          bg-gradient-to-r
+          from-violet-500
+          via-fuchsia-400
+          to-transparent
+        "
+      />
+
+      {/* Description */}
+
+      <p
+        className="
+          mt-10
+          max-w-2xl
+
+          text-lg
+          leading-9
+
+          text-slate-300
+
+          md:text-xl
+        "
+      >
+        I build{" "}
+        <span className="font-semibold text-white">
+          data-driven applications
+        </span>{" "}
+        and transform complex datasets into meaningful insights using{" "}
+        <span className="font-semibold text-white">
+          Python
+        </span>
+        ,{" "}
+        <span className="font-semibold text-white">
+          SQL
+        </span>
+        ,{" "}
+        <span className="font-semibold text-white">
+          Power BI
+        </span>{" "}
+        and{" "}
+        <span className="font-semibold text-white">
+          Excel
+        </span>
+        .
       </p>
 
-      <p className="mt-6 max-w-xl text-lg leading-8 text-slate-400">
-        Currently building advanced expertise in
-        <span className="font-semibold text-violet-400">
-          {" "}Data Science
-        </span>,
-        <span className="font-semibold text-violet-300">
-          {" "}Machine Learning
-        </span>
-        {" "}and
-        <span className="font-semibold text-violet-200">
-          {" "}Artificial Intelligence
-        </span>
-        {" "}to create intelligent systems with measurable business impact.
-      </p>
+      {/* Secondary Description */}
 
+      <p
+        className="
+          mt-6
+          max-w-2xl
+
+          text-base
+          leading-8
+
+          text-slate-400
+
+          md:text-lg
+        "
+      >
+        Currently expanding my expertise in{" "}
+        <span className="font-medium text-violet-300">
+          Machine Learning
+        </span>
+        ,{" "}
+        <span className="font-medium text-violet-300">
+          Data Science
+        </span>{" "}
+        and{" "}
+        <span className="font-medium text-violet-300">
+          Artificial Intelligence
+        </span>{" "}
+        while developing scalable, real-world solutions focused on business impact.
+      </p>
     </div>
   );
 }

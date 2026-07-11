@@ -1,79 +1,153 @@
 import Link from "next/link";
-import { ArrowRight, Download } from "lucide-react";
+
+import { Download, FolderOpen, Mail } from "lucide-react";
+
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function HeroButtons() {
   return (
-    <div className="mt-10">
+    <div className="mt-12 flex flex-col gap-8">
+      {/* Primary Buttons */}
 
-      <div className="flex flex-wrap justify-center gap-5 lg:justify-start">
-
-        <Link
-          href="#projects"
-          className="
-            group
-            inline-flex
-            items-center
-            gap-2
-            rounded-2xl
-            bg-violet-600
-            px-8
-            py-4
-            font-semibold
-            text-white
-            shadow-lg
-            shadow-violet-600/30
-            transition-all
-            duration-300
-            hover:-translate-y-1
-            hover:bg-violet-500
-            hover:shadow-violet-500/40
-          "
-        >
-          View Projects
-
-          <ArrowRight
-            size={20}
-            className="transition-transform duration-300 group-hover:translate-x-1"
-          />
-        </Link>
-
+      <div className="flex flex-wrap items-center gap-4">
         <Link
           href="/resume.pdf"
           target="_blank"
           className="
-            group
             inline-flex
             items-center
             gap-2
-            rounded-2xl
-            border
-            border-white/10
-            bg-white/5
-            px-8
-            py-4
-            font-semibold
-            backdrop-blur-xl
+
+            rounded-xl
+
+            bg-violet-600
+
+            px-6
+            py-3.5
+
+            font-medium
+            text-white
+
             transition-all
             duration-300
+
             hover:-translate-y-1
-            hover:border-violet-500
-            hover:bg-white/10
+            hover:bg-violet-500
+            hover:shadow-[0_15px_45px_rgba(139,92,246,.35)]
           "
         >
-          Download Resume
+          <Download size={18} />
 
-          <Download
-            size={18}
-            className="transition-transform duration-300 group-hover:translate-y-0.5"
-          />
+          Download Resume
         </Link>
 
+        <Link
+          href="#projects"
+          className="
+            inline-flex
+            items-center
+            gap-2
+
+            rounded-xl
+
+            border
+            border-white/10
+
+            bg-white/[0.04]
+
+            px-6
+            py-3.5
+
+            font-medium
+
+            text-slate-200
+
+            backdrop-blur-xl
+
+            transition-all
+            duration-300
+
+            hover:-translate-y-1
+            hover:border-violet-400/30
+            hover:bg-white/[0.06]
+          "
+        >
+          <FolderOpen size={18} />
+
+          View Projects
+        </Link>
       </div>
 
-      <p className="mt-6 text-sm text-slate-500">
-        Available for internships, freelance projects and full-time opportunities.
-      </p>
+      {/* Social Links */}
 
+      <div className="flex flex-wrap items-center gap-6">
+        <Link
+          href="https://github.com/YOUR_USERNAME"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="
+            inline-flex
+            items-center
+            gap-2
+
+            text-slate-400
+
+            transition-all
+            duration-300
+
+            hover:text-white
+            hover:-translate-y-0.5
+          "
+        >
+          <FaGithub className="text-xl" />
+
+          <span>GitHub</span>
+        </Link>
+
+        <Link
+          href="https://linkedin.com/in/YOUR_USERNAME"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="
+            inline-flex
+            items-center
+            gap-2
+
+            text-slate-400
+
+            transition-all
+            duration-300
+
+            hover:text-[#0A66C2]
+            hover:-translate-y-0.5
+          "
+        >
+          <FaLinkedin className="text-xl" />
+
+          <span>LinkedIn</span>
+        </Link>
+
+        <Link
+          href="mailto:YOUR_EMAIL@gmail.com"
+          className="
+            inline-flex
+            items-center
+            gap-2
+
+            text-slate-400
+
+            transition-all
+            duration-300
+
+            hover:text-violet-300
+            hover:-translate-y-0.5
+          "
+        >
+          <Mail size={20} />
+
+          <span>Email</span>
+        </Link>
+      </div>
     </div>
   );
 }

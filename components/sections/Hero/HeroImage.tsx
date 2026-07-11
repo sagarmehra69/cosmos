@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function HeroImage() {
   return (
-    <div className="relative flex items-center justify-center lg:-translate-y-10">
+    <div className="relative flex items-center justify-center lg:-mt-20 xl:-mt-24">
 
       {/* Background Glow */}
       <div className="absolute h-[520px] w-[520px] rounded-full bg-violet-600/12 blur-[150px]" />
