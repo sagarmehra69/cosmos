@@ -7,7 +7,7 @@ export const projects: Project[] = [
     description:
       "An AI-powered retail analytics platform that combines sales forecasting, customer churn prediction and inventory intelligence into a single interactive dashboard for smarter business decisions.",
 
-    image: "/images/projects/neural-retail.png",
+    image: "/images/projects/NAI.webp",
 
     github: "https://github.com/sagarmehra69/neuralretail-ai-sales-intelligence",
 
@@ -43,7 +43,7 @@ export const projects: Project[] = [
     description:
       "A comprehensive analytics platform that monitors student performance, tracks KPIs and visualizes academic insights using interactive dashboards.",
 
-    image: "/images/projects/spis.png",
+    image: "/images/projects/SPIS.webp",
 
     github: "https://github.com/sagarmehra69/student-performance-intelligence-system",
 
@@ -75,7 +75,7 @@ export const projects: Project[] = [
     description:
       "A retail analytics project focused on customer purchasing behaviour, exploratory data analysis and business intelligence for better retail decisions.",
 
-    image: "/images/projects/customer-shopping.png",
+    image: "/images/projects/Nassau_Image.webp",
 
     github: "https://github.com/sagarmehra69/Customer-shopping-behavior-analysis",
 
@@ -97,37 +97,6 @@ export const projects: Project[] = [
       "EDA",
       "Business Insights",
       "Visualization",
-    ],
-  },
-
-  {
-    title: "UAC Care Transition Analytics",
-
-    shortTitle: "UAC",
-    description:
-      "A healthcare analytics dashboard that tracks operational KPIs and visualizes care transition performance through interactive reports.",
-
-    image: "/images/projects/uac-care.png",
-
-    github: "https://github.com/sagarmehra69/uac-care-transition-analytics",
-
-    demo: "",
-
-    featured: false,
-
-    technologies: [
-      "Python",
-      "Power BI",
-      "Streamlit",
-      "Pandas",
-      "Healthcare Analytics",
-    ],
-
-    highlights: [
-      "Healthcare KPIs",
-      "Dashboard",
-      "Interactive Reports",
-      "Analytics",
     ],
   },
 ];

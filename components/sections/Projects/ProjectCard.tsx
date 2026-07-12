@@ -14,111 +14,160 @@ export default function ProjectCard({
   project,
 }: ProjectCardProps) {
   return (
-    <div
+    <article
       className="
         group
         flex
-        h-125
-        w-85
-        shrink-0
-        snap-center
+
+       w-full
+
         flex-col
+
         overflow-hidden
-        rounded-3xl
+
+        rounded-2xl
+
         border
-        border-white/5
-        bg-white/5
+        border-white/10
+
+        bg-white/[0.03]
+
         backdrop-blur-xl
+
         transition-all
-        duration-300
-        hover:-translate-y-2
-        hover:border-violet-500/40
-        hover:shadow-[0_25px_70px_rgba(139,92,246,0.35)]
+        duration-500
+
+        hover:-translate-y-1.5
+        hover:border-violet-500/25
+        hover:shadow-[0_18px_45px_rgba(139,92,246,0.15)]
       "
     >
-      <div className="relative h-52 overflow-hidden">
-        <div
-          className="
-            absolute
-            inset-0
-            z-10
-            bg-linear-to-t
-            from-black/70
-            via-black/10
-            to-transparent
-            opacity-0
-            transition-all
-            duration-500
-            group-hover:opacity-100
-          "
-        />
+      {/* Image */}
 
+      <div className="relative h-48 overflow-hidden">
         <Image
           src={project.image}
           alt={project.title}
           fill
           className="
             object-cover
-            transition-all
+
+            transition-transform
             duration-700
-            group-hover:scale-110
-            group-hover:brightness-110
+
+            group-hover:scale-105
+          "
+        />
+
+        <div
+          className="
+            absolute
+            inset-0
+
+            bg-gradient-to-t
+            from-black/70
+            via-black/20
+            to-transparent
           "
         />
 
         {project.featured && (
-          <div
+          <span
             className="
               absolute
               left-4
               top-4
-              z-20
+
               rounded-full
-              bg-violet-600/90
+
+              bg-violet-600
+
               px-3
               py-1
-              text-xs
+
+              text-[11px]
               font-semibold
+
               text-white
-              backdrop-blur-md
             "
           >
-            ⭐ Featured
-          </div>
+            Featured
+          </span>
         )}
       </div>
 
-      <div className="flex flex-1 flex-col p-6">
-        <h3 className="line-clamp-2 text-xl font-bold tracking-tight text-white transition-colors duration-300 group-hover:text-violet-300">
+      {/* Content */}
+
+      <div className="flex flex-1 flex-col p-5">
+        <h3
+          className="
+            text-xl
+            font-bold
+
+            text-white
+
+            transition-colors
+
+            group-hover:text-violet-300
+          "
+        >
           {project.title}
         </h3>
 
-        <p className="mt-3 line-clamp-3 text-sm leading-7 text-slate-300">
+        <p
+          className="
+            mt-3
+
+            line-clamp-2
+
+            text-[15px]
+            leading-6
+
+            text-slate-400
+          "
+        >
           {project.description}
         </p>
 
-        <div className="mt-6 flex flex-wrap gap-2">
-          {project.technologies.slice(0, 4).map((tech) => (
-            <TechBadge key={tech} technology={tech} />
-          ))}
+        {/* Technologies */}
+
+        <div className="mt-5 flex flex-wrap gap-2">
+          {project.technologies
+            .slice(0, 4)
+            .map((tech) => (
+              <TechBadge
+                key={tech}
+                technology={tech}
+              />
+            ))}
         </div>
 
-        <div className="mt-auto flex items-center justify-between pt-8 transition-all duration-300 group-hover:-translate-y-1">
+        {/* Divider */}
+
+        <div className="my-5 h-px bg-white/10" />
+
+        {/* Footer */}
+
+        <div className="flex items-center justify-between">
           <Link
             href={project.github}
             target="_blank"
             className="
-              flex
+              inline-flex
               items-center
               gap-2
+
               text-sm
               font-medium
-              text-white
-              transition
-              hover:text-violet-400
+
+              text-slate-300
+
+              transition-colors
+
+              hover:text-white
             "
           >
-            <FaGithub size={18} />
+            <FaGithub size={17} />
             GitHub
           </Link>
 
@@ -127,23 +176,26 @@ export default function ProjectCard({
               href={project.demo}
               target="_blank"
               className="
-                flex
+                inline-flex
                 items-center
                 gap-2
+
                 text-sm
                 font-medium
+
                 text-violet-400
-                transition
+
+                transition-colors
+
                 hover:text-violet-300
               "
             >
-              Demo
+              Live Demo
               <ExternalLink size={16} />
             </Link>
           )}
         </div>
       </div>
-
-    </div>
+    </article>
   );
 }
