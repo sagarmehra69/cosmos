@@ -1,28 +1,89 @@
+"use client";
+
+import Link from "next/link";
+
+import { useScrolled } from "@/hooks/useScrolled";
+
+import NavLinks from "./NavLinks";
+import MobileMenu from "./MobileMenu";
+
 export default function Navbar() {
+  const scrolled = useScrolled();
+
   return (
-    <header className="fixed top-0 left-0 w-full z-50 flex justify-center pt-6">
-      <nav className="w-[92%] max-w-7xl rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl">
-        <div className="flex items-center justify-between px-6 py-4">
+    <header
+      className={`
+        fixed
+        inset-x-0
+        top-0
+        z-50
+        border-b
+        transition-all
+        duration-300
 
-          <h1 className="text-xl font-bold">
-            🪐 Cosmos
-          </h1>
+        ${
+          scrolled
+            ? "border-white/15 bg-black/70 backdrop-blur-2xl shadow-lg shadow-black/20"
+            : "border-white/10 bg-black/30 backdrop-blur-xl"
+        }
+      `}
+    >
+      <div
+        className={`
+          mx-auto
+          flex
+          max-w-7xl
+          items-center
+          justify-between
+          px-6
+          transition-all
+          duration-300
 
-          <ul className="hidden md:flex gap-8 text-sm">
-            <li>Home</li>
-            <li>About</li>
-            <li>Skills</li>
-            <li>Projects</li>
-            <li>Experience</li>
-            <li>Contact</li>
-          </ul>
+          ${scrolled ? "h-16" : "h-20"}
+        `}
+      >
+        {/* Empty Left Space */}
 
-          <button className="rounded-xl bg-violet-600 px-5 py-2 text-sm font-medium hover:bg-violet-500 transition">
-            Resume
-          </button>
+        <div className="hidden w-40 lg:block" />
 
+        {/* Center Navigation */}
+
+        <NavLinks />
+
+        {/* Right Side */}
+
+        <div className="flex items-center gap-4">
+          <Link
+            href="/Resume.pdf"
+            target="_blank"
+            className="
+              hidden
+              lg:inline-flex
+              items-center
+              rounded-full
+              border
+              border-violet-500/30
+              bg-violet-500/10
+              px-5
+              py-2.5
+              text-sm
+              font-medium
+              text-violet-300
+              transition-all
+              duration-300
+              hover:-translate-y-0.5
+              hover:border-violet-400
+              hover:bg-violet-500
+              hover:text-white
+              hover:shadow-[0_0_30px_rgba(139,92,246,0.35)]
+            "
+          >
+            Resume ↗
+          </Link>
+
+          <MobileMenu />
         </div>
-      </nav>
+      </div>
     </header>
   );
 }

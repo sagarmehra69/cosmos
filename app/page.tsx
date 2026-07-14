@@ -1,15 +1,23 @@
-import Background from "@/components/Space/Background";
 import Hero from "@/components/sections/Hero/Hero";
-import Navbar from "@/components/layout/Navbar/Navbar";
 import About from "@/components/sections/About/About";
+import Experience from "@/components/sections/Experience/Experience";
+import Skills from "@/components/sections/Skills/Skills";
+import {Projects} from "@/components/sections/Projects";
+import {Education} from "@/components/sections/Education";
+import {Contact} from "@/components/sections/Contact";
+import Navbar from "@/components/layout/Navbar/Navbar";
 
 export default function Home() {
   return (
-    <main>
-      <Background />
+    <main className="relative z-10">
       <Navbar />
       <Hero />
       <About />
+      <Experience />
+      <Skills />
+      <Projects />
+      <Education /> 
+      <Contact />
     </main>
   );
 }

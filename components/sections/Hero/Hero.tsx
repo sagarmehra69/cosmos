@@ -1,40 +1,114 @@
-import { hero } from "@/data/hero";
+import FadeUp from "@/components/ui/FadeUp";
 
+import HeroBackground from "./HeroBackground";
 import HeroButtons from "./HeroButtons";
+import HeroImage from "./HeroImage";
 import HeroStats from "./HeroStats";
+import HeroTitle from "./HeroTitle";
+import HeroTyping from "./HeroTyping";
 import ScrollIndicator from "./ScrollIndicator";
 
 export default function Hero() {
   return (
-    <section className="flex min-h-screen items-center justify-center px-6 pt-24">
-      <div className="max-w-5xl text-center">
+    <section
+      id="home"
+      className="
+        relative
+        isolate
 
-        <p className="text-sm font-semibold uppercase tracking-[0.35em] text-violet-400">
-          {hero.greeting}
-        </p>
+        flex
+        min-h-screen
 
-        <p className="mt-8 text-2xl text-slate-300">
-          {hero.intro}
-        </p>
+        overflow-hidden
 
-        <h1 className="mt-3 text-7xl font-black tracking-tight md:text-9xl">
-          {hero.name}
-        </h1>
+        px-6
+      "
+    >
+      <HeroBackground />
 
-        <h2 className="mt-6 text-3xl font-semibold text-slate-200 md:text-5xl">
-          {hero.role}
-        </h2>
+      <div
+        className="
+          relative
+          z-10
 
-        <p className="mx-auto mt-8 max-w-2xl text-lg leading-9 text-slate-400">
-          {hero.description}
-        </p>
+          mx-auto
 
-        <HeroButtons />
+          flex
+          w-full
+          max-w-7xl
+          flex-col
+          justify-between
+        "
+      >
+        {/* ============================
+            Main Hero
+        ============================ */}
 
-        <HeroStats />
+        <div
+          className="
+            flex-1
 
-        <ScrollIndicator />
+            grid
+            items-center
 
+            gap-16
+
+            pt-24
+
+            lg:grid-cols-[1.1fr_0.9fr]
+          "
+        >
+          {/* Left */}
+
+          <div>
+            <FadeUp>
+              <HeroTitle />
+            </FadeUp>
+
+            <FadeUp delay={0.08}>
+              <HeroTyping />
+            </FadeUp>
+
+            <FadeUp delay={0.16}>
+              <HeroButtons />
+            </FadeUp>
+
+            <FadeUp delay={0.24}>
+              <HeroStats />
+            </FadeUp>
+          </div>
+
+          {/* Right */}
+
+          <div
+            className="
+              flex
+              items-center
+              justify-center
+            "
+          >
+            <FadeUp delay={0.15}>
+              <HeroImage />
+            </FadeUp>
+          </div>
+        </div>
+
+        {/* ============================
+            Scroll Indicator
+        ============================ */}
+
+        <div
+          className="
+            flex
+            justify-center
+
+            pb-8
+          "
+        >
+          <FadeUp delay={0.5}>
+            <ScrollIndicator />
+          </FadeUp>
+        </div>
       </div>
     </section>
   );

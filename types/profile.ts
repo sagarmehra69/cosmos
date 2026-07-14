@@ -1,5 +1,3 @@
-import { Profile } from "@/types";
-
 export interface Profile {
   firstName: string;
   lastName: string;
